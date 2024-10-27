@@ -14,9 +14,10 @@ public class MeshGenerator {
 
         // Setup textures
         mesh.getTexCoords().addAll(0,0);
+        mesh.getTexCoords().addAll(1,0);
+        mesh.getTexCoords().addAll(1,1);
 
         // Create Mesh Object
-
         for (int y = 0; y < 64; y++) {
             for (int x = 0; x < 16; x++) {
                 for (int z = 0; z < 16; z++) {
@@ -25,18 +26,6 @@ public class MeshGenerator {
                 }
             }
         }
-
-        /*
-        ChunkManager.loadedChunks.forEach((coord, chunk) -> {
-            for (int y = 0; y < 64; y++) {
-                for (int x = 0; x < 16; x++) {
-                    for (int z = 0; z < 16; z++) {
-                        Block block = chunk[x][y][z];
-                        block.constructMesh(mesh, new Vec3(x,y,z), coord);
-                    }
-                }
-            }
-        });*/
 
         return mesh;
     }

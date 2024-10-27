@@ -15,7 +15,6 @@ public class MCClone {
     public static PhongMaterial MATERIAL = new PhongMaterial();
 
     public static void main(String[] args) {
-
         MATERIAL.setDiffuseColor(Color.RED);
 
         ChunkManager.init();

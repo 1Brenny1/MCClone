@@ -18,8 +18,8 @@ public class ChunkManager {
     public static NoiseGenerator noise = new NoiseGenerator();
 
     public static void init() {
-        for (int x = -5; x < 5; x++) {
-            for (int y = -5; y < 5; y++){
+        for (int x = -1; x <= 1; x++) {
+            for (int y = -1; y <= 1; y++){
                 Chunk chunk = generateChunk(new Vec2(x,y));
                 spawnChunk(Window.root, chunk);
             }

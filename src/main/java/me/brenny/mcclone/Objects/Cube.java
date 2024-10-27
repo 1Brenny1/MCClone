@@ -79,8 +79,7 @@ public abstract class Cube extends Block {
         if (coordinate.x == 0) {
             Chunk _chunk = ChunkManager.loadedChunks.get(new Vec2(chunkCoordinate.x-1, chunkCoordinate.y));
             if (_chunk != null) if (!_chunk.blocks[15][(int)coordinate.y][(int)coordinate.z].isSolid()) renderLeft = true;
-        }
-        else if (!chunk.blocks[(int)coordinate.x-1][(int)coordinate.y][(int)coordinate.z].isSolid()) renderLeft = true;
+        } else if (!chunk.blocks[(int)coordinate.x-1][(int)coordinate.y][(int)coordinate.z].isSolid()) renderLeft = true;
         if (renderLeft) { // Left
             mesh.getFaces().addAll(
                     6+modifier,0, 4+modifier,0, 0+modifier,0,
