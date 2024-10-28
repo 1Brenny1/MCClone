@@ -62,8 +62,8 @@ public abstract class Cube extends Block {
         else if (!chunk.blocks[(int)coordinate.x][(int)coordinate.y+1][(int)coordinate.z].isSolid()) renderTop = true;
         if (renderTop) { // Top
             mesh.getFaces().addAll(
-                    5+modifier,0, 1+modifier,0, 0+modifier,0,
-                    0+modifier,0, 4+modifier,0, 5+modifier,0
+                    5+modifier,0, 1+modifier,1, 0+modifier,2,
+                    0+modifier,2, 4+modifier,1, 5+modifier,0
             );
         }
         boolean renderBottom = false;

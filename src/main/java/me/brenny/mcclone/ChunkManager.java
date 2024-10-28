@@ -1,5 +1,6 @@
 package me.brenny.mcclone;
 
+import javafx.scene.effect.BlendMode;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Mesh;

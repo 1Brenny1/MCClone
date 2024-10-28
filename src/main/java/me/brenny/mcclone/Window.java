@@ -26,11 +26,11 @@ public class Window extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         scene = new Scene(root, MCClone.DEFAULT_SCREEN_SIZE.x, MCClone.DEFAULT_SCREEN_SIZE.y, true);
-        //MCClone.MATERIAL.setDiffuseMap(new Image("terrain.png"));
+        MCClone.onWindowStart();
 
 
         AmbientLight ambientLight = new AmbientLight(Color.rgb(255,255,255,0.5));
-        //root.getChildren().add(ambientLight);
+        root.getChildren().add(ambientLight);
 
         PerspectiveCamera camera = new PerspectiveCamera();
         camera.setTranslateZ(1000);

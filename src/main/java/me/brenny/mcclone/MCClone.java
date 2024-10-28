@@ -13,13 +13,18 @@ public class MCClone {
     public static final int BLOCK_SIZE = 100;
 
     public static PhongMaterial MATERIAL = new PhongMaterial();
+    public static Image TEXTURE;
 
     public static void main(String[] args) {
-        MATERIAL.setDiffuseColor(Color.RED);
-
         ChunkManager.init();
 
         Window window = new Window();
         window.init(args);
+    }
+
+    public static void onWindowStart() {
+        MCClone.TEXTURE = new Image("terrain_fix.png");
+        MCClone.MATERIAL.setDiffuseMap(MCClone.TEXTURE);
+        MCClone.MATERIAL.setSelfIlluminationMap(MCClone.TEXTURE);
     }
 }

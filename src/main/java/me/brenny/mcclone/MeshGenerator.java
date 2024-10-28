@@ -14,8 +14,8 @@ public class MeshGenerator {
 
         // Setup textures
         mesh.getTexCoords().addAll(0,0);
-        mesh.getTexCoords().addAll(1,0);
-        mesh.getTexCoords().addAll(1,1);
+        mesh.getTexCoords().addAll(0.0625f,0);
+        mesh.getTexCoords().addAll(0.0625f,0.0625f);
 
         // Create Mesh Object
         for (int y = 0; y < 64; y++) {
