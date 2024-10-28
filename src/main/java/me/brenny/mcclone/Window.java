@@ -29,6 +29,7 @@ public class Window extends Application {
         MCClone.onWindowStart();
 
 
+        // Global Ilumination
         AmbientLight ambientLight = new AmbientLight(Color.rgb(255,255,255,0.5));
         root.getChildren().add(ambientLight);
 

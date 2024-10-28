@@ -23,8 +23,10 @@ public class MCClone {
     }
 
     public static void onWindowStart() {
-        MCClone.TEXTURE = new Image("terrain_fix.png");
-        MCClone.MATERIAL.setDiffuseMap(MCClone.TEXTURE);
-        MCClone.MATERIAL.setSelfIlluminationMap(MCClone.TEXTURE);
+        //MCClone.TEXTURE = new Image("terrain.png");
+        //MCClone.MATERIAL.setDiffuseMap(MCClone.TEXTURE);
+        //MCClone.MATERIAL.setSelfIlluminationMap(MCClone.TEXTURE);
+
+        MCClone.MATERIAL.setDiffuseColor(Color.DARKGREEN);
     }
 }

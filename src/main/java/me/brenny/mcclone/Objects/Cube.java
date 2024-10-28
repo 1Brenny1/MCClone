@@ -15,9 +15,9 @@ public abstract class Cube extends Block {
     public void constructMesh(TriangleMesh mesh, Vec3 coordinate, Vec2 chunkCoordinate) {
         float halfScale = MCClone.BLOCK_SIZE / 2f;
 
-        float x = (float) (coordinate.x/* + chunkCoordinate.x*16 */)*MCClone.BLOCK_SIZE;
+        float x = (float) (coordinate.x)*MCClone.BLOCK_SIZE;
         float y = (float) -coordinate.y*MCClone.BLOCK_SIZE; // Negative to fix issue with JavaFX
-        float z = (float) (coordinate.z/* + chunkCoordinate.y*16 */)*MCClone.BLOCK_SIZE;
+        float z = (float) (coordinate.z)*MCClone.BLOCK_SIZE;
 
         int modifier = mesh.getPoints().size()/3;
 
@@ -41,7 +41,7 @@ public abstract class Cube extends Block {
         } else if (!chunk.blocks[(int)coordinate.x][(int)coordinate.y][(int)coordinate.z+1].isSolid()) renderFront = true;
         if (renderFront) { // Front
             mesh.getFaces().addAll(
-                    0+modifier,0, 1+modifier,0, 2+modifier,0,
+                    modifier,0, 1+modifier,0, 2+modifier,0,
                     3+modifier,0, 2+modifier,0, 1+modifier,0
             );
         }
@@ -62,8 +62,8 @@ public abstract class Cube extends Block {
         else if (!chunk.blocks[(int)coordinate.x][(int)coordinate.y+1][(int)coordinate.z].isSolid()) renderTop = true;
         if (renderTop) { // Top
             mesh.getFaces().addAll(
-                    5+modifier,0, 1+modifier,1, 0+modifier,2,
-                    0+modifier,2, 4+modifier,1, 5+modifier,0
+                    5+modifier,0, 1+modifier,0, modifier,0,
+                    modifier,0, 4+modifier,0, 5+modifier,0
             );
         }
         boolean renderBottom = false;
@@ -82,8 +82,8 @@ public abstract class Cube extends Block {
         } else if (!chunk.blocks[(int)coordinate.x-1][(int)coordinate.y][(int)coordinate.z].isSolid()) renderLeft = true;
         if (renderLeft) { // Left
             mesh.getFaces().addAll(
-                    6+modifier,0, 4+modifier,0, 0+modifier,0,
-                    0+modifier,0, 2+modifier,0, 6+modifier,0
+                    6+modifier,0, 4+modifier,0, modifier,0,
+                    modifier,0, 2+modifier,0, 6+modifier,0
             );
         }
         boolean renderRight = false;
