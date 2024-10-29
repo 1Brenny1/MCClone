@@ -14,6 +14,7 @@ public abstract class Cube extends Block {
     @Override
     public void constructMesh(TriangleMesh mesh, Vec3 coordinate, Vec2 chunkCoordinate) {
         float halfScale = MCClone.BLOCK_SIZE / 2.0f;
+        halfScale *= 1.01f;
 
         float x = (float) (coordinate.x)*MCClone.BLOCK_SIZE;
         float y = (float) -coordinate.y*MCClone.BLOCK_SIZE; // Negative to fix issue with JavaFX
