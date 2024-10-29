@@ -1,10 +1,7 @@
 package me.brenny.mcclone;
 
 import javafx.scene.shape.TriangleMesh;
-import me.brenny.mcclone.Objects.Block;
-import me.brenny.mcclone.Objects.Chunk;
-import me.brenny.mcclone.Objects.Vec2;
-import me.brenny.mcclone.Objects.Vec3;
+import me.brenny.mcclone.Objects.*;
 
 public class MeshGenerator {
 
@@ -13,9 +10,7 @@ public class MeshGenerator {
         mesh = new TriangleMesh();
 
         // Setup textures
-        mesh.getTexCoords().addAll(0,0);
-        mesh.getTexCoords().addAll(0.0625f,0);
-        mesh.getTexCoords().addAll(0.0625f,0.0625f);
+        TextureManager.loadTextureData(mesh);
 
         // Create Mesh Object
         for (int y = 0; y < 64; y++) {

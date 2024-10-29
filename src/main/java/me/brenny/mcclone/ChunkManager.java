@@ -1,11 +1,14 @@
 package me.brenny.mcclone;
 
+import javafx.animation.AnimationTimer;
+import javafx.geometry.Point3D;
 import javafx.scene.effect.BlendMode;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Mesh;
 import javafx.scene.shape.MeshView;
 import me.brenny.mcclone.Blocks.Air;
+import me.brenny.mcclone.Blocks.Grass;
 import me.brenny.mcclone.Blocks.Stone;
 import me.brenny.mcclone.Objects.Block;
 import me.brenny.mcclone.Objects.Chunk;
@@ -29,7 +32,7 @@ public class ChunkManager {
 
     public static void spawnChunk(StackPane root, Chunk chunk) {
         chunk.meshView = new MeshView();
-        chunk.meshView.setMaterial(MCClone.MATERIAL);
+        chunk.meshView.setMaterial(TextureManager.MATERIAL);
 
         Mesh mesh = MeshGenerator.generateMesh(chunk);
         chunk.meshView.setMesh(mesh);
@@ -51,7 +54,7 @@ public class ChunkManager {
                         chunk.blocks[x][y][z] = new Air();
                         continue;
                     }
-                    chunk.blocks[x][y][z] = new Stone();
+                    chunk.blocks[x][y][z] = new Grass();
                 }
             }
         }

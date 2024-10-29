@@ -3,6 +3,7 @@ package me.brenny.mcclone.Blocks;
 import javafx.scene.shape.TriangleMesh;
 import me.brenny.mcclone.MCClone;
 import me.brenny.mcclone.Objects.Block;
+import me.brenny.mcclone.Objects.TextureData;
 import me.brenny.mcclone.Objects.Vec2;
 import me.brenny.mcclone.Objects.Vec3;
 
@@ -15,6 +16,11 @@ public class Air extends Block {
     @Override
     public boolean isSolid() {
         return false;
+    }
+
+    @Override
+    public TextureData getTextureData() {
+        return null;
     }
 
     @Override

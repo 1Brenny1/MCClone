@@ -6,6 +6,7 @@ public abstract class Block {
     public abstract String getIdentifier();
     public abstract boolean isSolid();
     public abstract void constructMesh(TriangleMesh mesh, Vec3 coordinate, Vec2 chunkCoordinate);
+    public abstract TextureData getTextureData();
     public boolean onBreak() {
         return true;
     }

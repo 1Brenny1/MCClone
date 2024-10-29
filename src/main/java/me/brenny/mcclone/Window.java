@@ -31,7 +31,7 @@ public class Window extends Application {
 
         // Global Ilumination
         AmbientLight ambientLight = new AmbientLight(Color.rgb(255,255,255,0.5));
-        root.getChildren().add(ambientLight);
+        //root.getChildren().add(ambientLight);
 
         PerspectiveCamera camera = new PerspectiveCamera();
         camera.setTranslateZ(1000);

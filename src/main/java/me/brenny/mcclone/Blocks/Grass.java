@@ -1,17 +1,16 @@
 package me.brenny.mcclone.Blocks;
 
-import me.brenny.mcclone.Objects.Block;
 import me.brenny.mcclone.Objects.Cube;
 import me.brenny.mcclone.Objects.TextureData;
 
-public class Stone extends Cube {
+public class Grass extends Cube {
     @Override
     public String getIdentifier() {
-        return "stone";
+        return "grass";
     }
 
     @Override
     public TextureData getTextureData() {
-        return new TextureData(1, 1, 1,1,1,1);
+        return new TextureData(0, 2, 3,3,3,3);
     }
 }
